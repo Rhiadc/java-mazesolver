@@ -15,23 +15,27 @@ public class MazeSolver{
 					//up
 					case 0:
 						if (maze[y-1][x] == ' '){
-							solved = solveRecursive(maze, y-1, x, 2);
+							solved = true; 
+							solveRecursive(maze, y-1, x, 2);
 							break;
 						}
 					//right	
 					case 1:
 						if(maze[y][x+1] == ' '){
-							solved = solveRecursive(maze, y, x+1, 3);
+							solved = true;
+							solveRecursive(maze, y, x+1, 3);
 							break;
 						}
 					case 2:
 						if(maze[y+1][x] == ' '){
-							solved = solveRecursive(maze, y+1, x, 0);
+							solved = true;
+							solveRecursive(maze, y+1, x, 0);
 							break;
 						}
 					case 3:
 						if(maze[y][x-1] == ' '){
-							solved = solveRecursive(maze, y, x-1, 1);
+							solved = true;
+							solveRecursive(maze, y, x-1, 1);
 							break;
 						}	
 				}
@@ -39,29 +43,33 @@ public class MazeSolver{
 		}
 		/*Esta segunda parte do codigo funciona como um escape de uma dead-zone. Caso o algoritmo se encontra em uma, ele 
 		a marcará com um 'x' e saira dela.*/
-		else{
-			maze[y][x] == 'x';
+		if(!solved){
+			maze[y][x] = 'x';
 			switch(d){
 					//up
 					case 0:
 						if (maze[y-1][x] == ' '){
-							solved = solveRecursive(maze, y-1, x, 2);
+							solved = true;
+							solveRecursive(maze, y-1, x, 2);
 							break;
 						}
 					//right	
 					case 1:
 						if(maze[y][x+1] == ' '){
-							solved = solveRecursive(maze, y, x+1, 3);
+							solved = true;
+							solveRecursive(maze, y, x+1, 3);
 							break;
 						}
 					case 2:
 						if(maze[y+1][x] == ' '){
-							solved = solveRecursive(maze, y+1, x, 0);
+							solved = true;
+							solveRecursive(maze, y+1, x, 0);
 							break;
 						}
 					case 3:
 						if(maze[y][x-1] == ' '){
-							solved = solveRecursive(maze, y, x-1, 1);
+							solved = true;
+							solveRecursive(maze, y, x-1, 1);
 							break;
 						}	
 				}
