@@ -1,5 +1,5 @@
-Classe Lines
 
+Classe Lines
 
 import javax.swing.JFrame;
 
@@ -14,11 +14,11 @@ public class Lines {
 
         JFrame frame= new JFrame("LABIRINTO - MAPA");
         
-        //definindo características do JFrame
-        //1º - Fecha a aplicação após o clique em exit
-        //2º - define o tamanho do JFrame
-        //3º - mantendo o objeto vázio
-        //4º - cria o Frame(mapa)
+        //definindo caracterÃ­sticas do JFrame
+        //1Âº - Fecha a aplicaÃ§Ã£o apÃ³s o clique em exit
+        //2Âº - define o tamanho do JFrame
+        //3Âº - mantendo o objeto vÃ¡zio
+        //4Âº - cria o Frame(mapa)
         
             frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
             frame.setSize( 250, 250 );
@@ -35,10 +35,15 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 public class MAPCONSTRUCT extends JPanel{
+
+    //o g Ã© um objeto do mÃ©todo paintComponent
+    //super Ã© uma superclasse
     
     public void paintComponent( Graphics g ){
     super.paintComponent( g );
-        
+    
+    //aqui estamos definindo uma linha, no caso:
+    //g.drawLine(inicio em x, inicio em y, tamanho em x, tamanho em y);
     g.drawLine( 0, 0, 250, 250 );
 
     }
