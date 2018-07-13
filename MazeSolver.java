@@ -60,27 +60,27 @@ public class MazeSolver{
 		if (maze[y-1][x] == 'f' ||  maze[y][x+1] == 'f' || maze[y+1][x] == 'f' || maze[y][x-1] == 'f' ){
           		solved = true;
 		}
-       	if (solved){
-			maze[y][x] = '*';
-			switch (d){
-				case 0:
-					maze[y-1][x] = '*';
-					break;
-				case 1:
-					maze[y][x+1] = '*';
-					break;
-				case 2:
-					maze[y+1][x] = '*';
-					break;
-				case 3:
-					maze[y][x-1] = '*';
-					break;
-				    }
+		if (solved){
+				maze[y][x] = '*';
+				switch (d){
+					case 0:
+						maze[y-1][x] = '*';
+						break;
+					case 1:
+						maze[y][x+1] = '*';
+						break;
+					case 2:
+						maze[y+1][x] = '*';
+						break;
+					case 3:
+						maze[y][x-1] = '*';
+						break;
+					    }
+			}
+
+		return solved;
+
 		}
-           
-	return solved;
-		
-	}
 
 
 	public static void imprime(char[][] maze){
@@ -99,7 +99,7 @@ public class MazeSolver{
 		File mapa = new File(arquivo);
 		List<String> lista = new ArrayList<String>();
 		try {
-		  BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("teste.txt")));
+		  BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(mapa)));
 		  while (br.ready()) {
 		    linha = br.readLine();
 		    lista.add(linha);
