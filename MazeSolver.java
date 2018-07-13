@@ -93,7 +93,7 @@ public class MazeSolver{
 	}
 
 	public static List<String> leMapa(int value){
-		String arquivo = "/mapa" + value + ".txt";
+		String arquivo = "mapa" + value + ".txt";
 		//falta criar um excp
 		String linha;  
 		File mapa = new File(arquivo);
