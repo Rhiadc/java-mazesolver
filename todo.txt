@@ -1,0 +1,5 @@
+  - Criar um metodo que pergunta qual mapa a pessoa quer jogar, este metodo deve receber como parametro um numero e invocar o metodo leMapa
+	- Criar um metodo que le uma lista de linhas e cria uma matriz de char, convertendo a linha em char e tirando os espaços entre os caracteres de uma linha
+	- Alterar a função solve recursive para ela imprimir o resultado final
+
+	Criar classes mapa, solução e classe principal. Além disso, deverá ser criado as classes proprias caso optemos por criar a parte gráfica do labirinto.
