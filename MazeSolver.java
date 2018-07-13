@@ -123,13 +123,16 @@ public class MazeSolver{
 										{'x',' ','x',' ','x',' ','x','x',' ','x'},
 										{'x',' ','x',' ',' ',' ',' ','x',' ','x'},
 										{'x','x','x','x','x','x','x','x','x','x'},};
-		//solveRecursive(maze, 1, 1, -1);
-		//imprime(maze);
 		List<String> mapa = leMapa(0);
+		System.out.println("Mapa selecionado: ");
 		for (int i = 0; i < mapa.size(); i++) {
 			String s = (String) mapa.get(i);
 			System.out.println(s);								
-		}	
+		}
+		System.out.println("Mapa resolvido: ");
+		solveRecursive(maze, 1, 1, -1);
+		imprime(maze);
+			
 		/**
 				Exemplo de mapa utilizado:
 						x x x x x x x x x x
