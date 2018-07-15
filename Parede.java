@@ -1,5 +1,5 @@
 public class Parede extends Caminho{
 
-	protected valor = 'x';
+	protected char valor = 'x';
 
 }
