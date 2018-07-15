@@ -83,34 +83,7 @@ public class MazeSolver{
 		}
 
 
-	public static void imprime(char[][] maze){
-		for (int i = 0; i<maze.length; i++){
-			for(int j =0; j<maze.length; j++){
-				System.out.print(maze[i][j] + " ");
-			}
-			System.out.println(" ");
-		}
-	}
 
-	public static List<String> leMapa(int value){
-		String arquivo = "mapa" + value + ".txt";
-		//falta criar um excp
-		String linha;  
-		File mapa = new File(arquivo);
-		List<String> lista = new ArrayList<String>();
-		try {
-		  BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(mapa)));
-		  while (br.ready()) {
-		    linha = br.readLine();
-		    lista.add(linha);
-		  }
-		  br.close(); 
-		}
-		catch (Exception e) {
-		  System.out.println("Erro: " + e.getMessage());
-		}
-		return lista;
-	}
 
 	public static void main(String[] args){
 		char[][] maze = new char[][]{{'x','x','x','x','x','x','x','x','x','x'},
@@ -123,7 +96,24 @@ public class MazeSolver{
 										{'x',' ','x',' ','x',' ','x','x',' ','x'},
 										{'x',' ','x',' ',' ',' ',' ','x',' ','x'},
 										{'x','x','x','x','x','x','x','x','x','x'},};
-		List<String> mapa = leMapa(0);
+		/*
+		System.out.println(mapa.size());
+		for (int i = 0; i < mapa.size(); i++) {
+			String s = (String) mapa.get(i);
+			System.out.println(s.length());	
+			System.out.println(s);							
+		}
+		System.out.println();
+		char[][] maze2 = new char[10][10];
+		maze2 = converteMapa(mapa);
+		for(int i=0; i<maze2.length; i++){
+			for(int j=0; j<maze2[0].length; j++){
+				System.out.print(maze2[i][j]);
+
+			}
+			System.out.println();
+		}
+		
 		System.out.println("Mapa selecionado: ");
 		for (int i = 0; i < mapa.size(); i++) {
 			String s = (String) mapa.get(i);
@@ -131,8 +121,8 @@ public class MazeSolver{
 		}
 		System.out.println("Mapa resolvido: ");
 		solveRecursive(maze, 1, 1, -1);
-		imprime(maze);
-			
+		imprime(maze);*/
+		
 		/**
 				Exemplo de mapa utilizado:
 						x x x x x x x x x x
