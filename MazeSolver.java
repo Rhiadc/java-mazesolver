@@ -76,7 +76,7 @@ public class MazeSolver{
           		solved = true;
 		}
 		if (solved){
-			
+				objeto[y][x] = (Asterisco) asterisco;
 				switch (d){
 					case 0:
 						objeto[y-1][x] = (Asterisco) asterisco;
