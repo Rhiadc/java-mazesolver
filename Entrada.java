@@ -1,4 +1,4 @@
 public class Entrada extends Caminho{
-	char valor = 'g';
+	char valor = 'g'; 
 
 }
