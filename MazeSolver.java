@@ -42,25 +42,25 @@ public class MazeSolver{
 				switch (i){
 					// 0 = cima, 1 = direita, 2 = baixo, 3 = esquerda
 				    case 0:
-					if (objeto[y-1][x] instanceof Caminho){
+					if (objeto[y-1][x] instanceof Livre){
 					    solved = mazeRecursive ( x, y - 1, 2);
 
 					}
 					break;
 				    case 1:
-					if (objeto[y][x+1] instanceof Caminho){
+					if (objeto[y][x+1] instanceof Livre){
 					    solved = mazeRecursive ( x + 1, y, 3);
 
 					}
 					break;
 				    case 2:
-					if (objeto[y+1][x] instanceof Caminho){
+					if (objeto[y+1][x] instanceof Livre){
 					    solved = mazeRecursive ( x, y + 1, 0);
 
 					}
 					break;
 				    case 3:
-					if (objeto[y][x-1] instanceof Caminho){
+					if (objeto[y][x-1] instanceof Livre){
 					    solved = mazeRecursive ( x - 1, y, 1);
 
 					}
